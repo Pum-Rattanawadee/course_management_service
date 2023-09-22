@@ -82,6 +82,8 @@ export const transfromCoursesDto = (courses: Course[]) => {
         courseDto.startTime = course.startTime
         courseDto.endTime =  course.endTime
         courseDto.numberOfStudent = course.numberOfStudent
+        courseDto.creditPrice = course.creditPrice
+        courseDto.nonCreditPrice = course.nonCreditPrice
         courseDto.instructorInfo = transformUserDto(course.instructor)
 
         coursesDto.push(courseDto)
