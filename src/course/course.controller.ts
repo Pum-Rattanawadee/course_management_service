@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Res, Body, UseGuards, HttpStatus,Request } from '@nestjs/common';
+import { Controller, Get, Post, Res, Body, UseGuards, HttpStatus,Request, Query } from '@nestjs/common';
 import { CourseService } from './course.service';
 import { Roles } from 'src/auth/role/role.decorator';
 import { Role } from 'src/auth/interface/user.interface'
@@ -14,6 +14,14 @@ export class CourseController {
   @Get()
   async findAll() {
     const courses = await this.courseService.findAll()
+    return transfromCoursesDto(courses)
+  }
+
+  @UseGuards(AuthGuard)
+  @Get("search")
+  async findByFilter(@Query() courseDto: CourseDto) {
+    console.log(courseDto)
+    const courses = await this.courseService.findByFilter(courseDto)
     return transfromCoursesDto(courses)
   }
 

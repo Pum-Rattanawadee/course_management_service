@@ -8,40 +8,30 @@ export class CourseDto {
     @IsString()
     id: string
 
-    @IsNotEmpty()
     @IsString()
     name: string
 
-    @IsNotEmpty()
     @IsString()
     description: string
 
-    @IsNotEmpty()
     @IsString()
     category: string
 
-    @IsNotEmpty()
     @IsString()
     image: string
 
-    @IsNotEmpty()
     @IsString()
     subject: string
 
-    @IsNotEmpty()
     @IsDate()
     startTime: Date
 
-    @IsNotEmpty()
     @IsDate()
     endTime: Date
 
-    @IsNotEmpty()
     numberOfStudent: number
-
     creditPrice: number
     nonCreditPrice: number
-
     instructorId: string
     instructor: User
     instructorInfo: UserDto
