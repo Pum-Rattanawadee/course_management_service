@@ -17,10 +17,10 @@ import { Course } from './course/entities/course.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: '1234',
+      host: 'db-mysql-nyc1-00923-do-user-14695603-0.b.db.ondigitalocean.com',
+      port: 25060,
+      username: 'doadmin',
+      password: 'AVNS_4jrZ9dpyrE7eHFB6pPK',
       database: 'course_management',
       entities: [User, Course],
       synchronize: true,
