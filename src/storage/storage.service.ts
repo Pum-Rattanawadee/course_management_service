@@ -21,11 +21,11 @@ import {
     ): Promise<PutObjectCommandOutput> {
       this.s3Client = new S3({
         forcePathStyle: false, // Configures to use subdomain/virtual calling format.
-        endpoint: "https://sgp1.digitaloceanspaces.com",
+        endpoint: "XXX",
         region: "sgp1",
         credentials: {
-          accessKeyId: "DO00HNJ3R22N3DZ9WW6K",
-          secretAccessKey: "z4NkS4TSNUbUG8+w6McQ2JovVPW0Q47b1LQcS9b+V6E"
+          accessKeyId: "XXX",
+          secretAccessKey: "XXX"
         }
     });
       return this.s3Client.putObject({
